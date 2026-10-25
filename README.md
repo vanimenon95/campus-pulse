@@ -1,6 +1,6 @@
 # Campus Pulse — AI-Powered College Club & Event Coordination System
 
-One home for every club, every stage, every Saturday night. Clubs post events, students register, and four AI components keep the week conflict-free.
+One home for every club, every stage, every event. Clubs post events, students register, and four AI components keep the week conflict-free.
 
 **Stack:** React 18 + Vite + plain CSS · Python Flask + SQLAlchemy · MySQL (MariaDB works too) · JWT auth
 

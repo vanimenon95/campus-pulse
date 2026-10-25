@@ -16,7 +16,7 @@ export default function Home() {
     <section className="hero">
       <div>
         <span className="eyebrow">AI keeps your week conflict-free</span>
-        <h1>One home for every club, every stage, every Saturday night.</h1>
+        <h1>One home for every club, every stage, every event.</h1>
         <p className="lead">Clubs post it, students claim a seat, and the schedule sorts itself out — no more two great events fighting for the same hour.</p>
         <div className="cta">
           <Link to="/events" className="btn primary">Explore this week</Link>
