@@ -52,8 +52,11 @@ def create_app(config_object=Config):
                 return send_from_directory(dist, path)
             return send_from_directory(dist, "index.html")
 
-    with app.app_context():
-        db.create_all()  # creates missing tables; database/schema.sql is the same layout
+        with app.app_context():
+        try:
+            db.create_all()  # creates missing tables; database/schema.sql is the same layout
+        except Exception:  # another worker created the tables at the same moment
+            db.session.rollback()
         if os.getenv("AUTO_SEED") == "1":  # load demo data automatically on first start
             from .models import User
             if User.query.count() == 0:
