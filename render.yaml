@@ -1,0 +1,13 @@
+# Optional Render blueprint (Render has no free MySQL: point DATABASE_URL at Railway/PlanetScale/Aiven MySQL).
+services:
+  - type: web
+    name: campus-pulse
+    runtime: docker
+    plan: free
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: AUTO_SEED
+        value: "1"
+      - key: DATABASE_URL
+        sync: false
